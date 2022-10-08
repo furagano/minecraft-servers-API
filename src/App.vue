@@ -34,7 +34,7 @@ export default{
                 id: Date.now(),
                 ip: this.ip
             }
-            this.ServerList.servers.push(newServer);
+            ServerList.this.servers.push(newServer);
         }
     },
 }
