@@ -4,7 +4,7 @@
             <div>not found 404</div>
         </template>
         <template v-else>
-            <div><strong>Название:</strong> {{server.description.replace(/§\w/g,'')}} </div>
+            <div><strong>Название сервера:</strong> {{server.description.replace(/§\w/g,'')}} </div>
             <div><strong>Онлайн:</strong> {{server.players.online}} </div>
             <div><strong>Версия:</strong> {{server.version.name}} </div>    
         </template>
