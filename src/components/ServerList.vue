@@ -4,8 +4,9 @@
             <div>not found 404</div>
         </template>
         <template v-else>
-            <div><strong>Название сервера:</strong> {{server.description.replace(/§\w/g,'')}} </div>
-            <div><strong>Онлайн:</strong> {{server.players.online}} </div>
+            <div class="server_image"><img :src="server.favicon" alt="Картинка"></div>
+            <div><strong>Онлайн:</strong> {{server.online}} </div>
+            <div><strong>Игроков:</strong> {{server.players.online}} из {{server.players.max}} </div>
             <div><strong>Версия:</strong> {{server.version.name}} </div>    
         </template>
     </div>
@@ -16,7 +17,7 @@ export default {
         ip:{
             type: String,
             required: false,
-            default: 'mc.hypixel.net'
+            default: ''
         }
     },
     data(){
@@ -42,12 +43,15 @@ export default {
 </script>
 <style scoped>
     .server{
-        margin-top: 15px;
-        background-color: rgb(92, 241, 92);
-        padding: 15px;
-        border: 2px solid saddlebrown;
-        border-radius: 12px;
-        box-shadow:inset 0 -6em 6em rgba(0, 0, 0, 0.2),
-        0.3em 1em 1em rgba(0, 0, 0, 0.3);
+        margin-inline: 10%;
+        margin-top: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 30px;
+        border: 3px solid rgb(255, 255, 255);
+        color: white;
+    }
+    .server_image{
+        padding-right: 10px;
+        float: left;
     }
 </style>

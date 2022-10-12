@@ -1,19 +1,22 @@
 <template>
-<div class="app">
-    <form @submit.prevent class="container">
-        
-        <div class="container_input">
-            <input 
-            class="input" 
-            v-model.lazy="ip"
-            placeholder="Напишите ip" 
-            type="text">
+   
+        <div class="app"> 
+            <form @submit.prevent class="container">
+                
+                <div class="container_input">
+                    <input 
+                    class="input" 
+                    v-model.lazy="ip"
+                    placeholder="Напишите ip" 
+                    type="text">
+                    <button class="btn" @click="findServer">Найти</button>
+                </div>
+                
+            </form>
+            <ServerList :ip="ip"/>     
         </div>
-        <button class="btn" @click="findServer">Найти</button>
-    </form>
-    <ServerList :ip="ip"/>
-       
-</div>
+   
+
 
 </template>
 
@@ -38,28 +41,29 @@ export default{
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+           
     }
     .app{
-        padding: 20px;
+        margin-top: 20px;
+        
     }
+   
     .container{
-        padding-left: 40%;
-        display: inline-block;
-    }
-    .container_input{
-        float: left;
+        margin-left: 40%;
     }
     .input{
-        width: 100%;
-        border: 1px solid teal;
+        width: 25%;
+        border: 1px solid rgb(255, 255, 255);
         padding: 10px 15px;
-
+        background:rgba(0, 0, 0, 0.8);
+        color: white;
     }
+    .input::placeholder{color: white;}
     .btn{
-        border: 1px solid teal;
+        border: 1px solid rgb(255, 255, 255);
         padding: 10px 15px;
-        background: none;
-        color: teal;
+        background:rgba(0, 0, 0, 0.8);
+        color: rgb(255, 255, 255);
     }
     
 
