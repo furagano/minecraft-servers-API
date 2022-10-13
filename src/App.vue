@@ -9,7 +9,7 @@
                     v-model.lazy="ip"
                     placeholder="Напишите ip" 
                     type="text">
-                    <button class="btn" @click="findServer">Найти</button>
+                    <button class="btn" @click="findServer">Поиск</button>
                 </div>
                 
             </form>
